@@ -106,7 +106,6 @@ The final steps...
 git push origin master
 ```
 
-
 ### Push your changes up to GitHub.
 
 If this is the first time pushing to GitHub you will need to extended command, otherwise, you can simply do a `git push`.
