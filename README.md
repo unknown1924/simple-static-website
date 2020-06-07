@@ -71,6 +71,42 @@ git checkout -b GH-issuenumber-title-of-issue
 
 Do you work, and commit as you see fit. Make your commit messages helpful.
 
+### Sync your Git Fork to the Original Repo
+
+First things first!
+
+* Add the original git repo as an upstream repository.
+
+```
+git remote -v
+git remote add upstream https://github.com/[Original Owner Username]/[Original Repository].git
+git remote -v
+```
+You are now ready to pull the changes from the original repository to the your forked repository.
+
+* To fetch all the changes from the original repo, goto directory of your cloned forked repo and do -
+
+```
+git fetch upstream
+```
+
+* Make sure that you are on your fork’s master branch
+
+```
+git checkout master
+```
+* Merge the changes from the upstream/master into your local master branch. This will bring your fork’s master branch into sync with the upstream repository without losing your local changes
+```
+git merge upstream/master
+```
+The final steps...
+* Your local branch is now in sync with the original repo master branch. Push your changes to update the github repo.
+
+```
+git push origin master
+```
+
+
 ### Push your changes up to GitHub.
 
 If this is the first time pushing to GitHub you will need to extended command, otherwise, you can simply do a `git push`.
